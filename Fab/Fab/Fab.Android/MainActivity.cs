@@ -1,11 +1,8 @@
-﻿using System;
-
+﻿
 using Android.App;
 using Android.Content.PM;
-using Android.Runtime;
-using Android.Views;
-using Android.Widget;
 using Android.OS;
+using SuaveControls.FloatingActionButton.Droid.Renderers;
 
 namespace Fab.Droid
 {
@@ -19,9 +16,10 @@ namespace Fab.Droid
 
             base.OnCreate(bundle);
 
+            FloatingActionButtonRenderer.Initialize();
+
             global::Xamarin.Forms.Forms.Init(this, bundle);
             LoadApplication(new App());
         }
     }
 }
-
